@@ -1,0 +1,23 @@
+package program5b;
+public class coverloading
+{
+int id;
+String name; 
+coverloading()
+{
+System.out.println("This is Default constructor"); 
+System.out.println("Student Id : "+id + "\nStudent Name : "+name); 
+}
+coverloading(int i, String n)
+{
+System.out.println("This is Parameterized Constructor:");
+id = i;
+name = n;
+System.out.println("Student Id : "+id + "\nStudent Name : "+name); 
+}
+public static void main(String[] args)
+{
+coverloading s = new coverloading();
+coverloading student = new coverloading(10, "David");
+}
+}
