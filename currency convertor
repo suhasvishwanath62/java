@@ -1,0 +1,91 @@
+package program6;
+import java.util.*;
+public class currency
+{
+ double inr,usd;
+double euro,yen;
+static Scanner sc=new Scanner(System.in);
+public void dollartorupee()
+{
+System.out.println("Enter dollars to convert into Rupees:"); 
+usd=sc.nextDouble();
+inr=usd*82;
+System.out.println("Dollar ="+usd+"equal to INR="+inr);
+}
+public void rupeetodollar()
+{
+System.out.println("Enter Rupee to convert into Dollars:"); 
+inr=sc.nextDouble();
+usd=inr/82;
+System.out.println("Rupee ="+inr+"equal to Dollars="+usd); 
+}
+public void eurotorupee()
+{
+System.out.println("Enter euro to convert into Rupees:"); 
+euro=sc.nextDouble();
+inr=euro*88;
+System.out.println("Euro ="+euro +"equal to INR="+inr);
+}
+public void rupeetoeuro()
+{
+System.out.println("Enter Rupees to convert into Euro:"); 
+inr=sc.nextDouble();
+euro=(inr/88);
+System.out.println("Rupee ="+inr +"equal to Euro="+euro); 
+}
+public void yentorupee()
+{
+System.out.println("Enter yen to convert into Rupees:"); 
+yen=sc.nextDouble();
+inr=yen*0.63;
+System.out.println("YEN="+yen +"equal to INR="+inr);
+}
+public void rupeetoyen()
+{
+System.out.println("Enter Rupees to convert into Yen:"); 
+inr=sc.nextDouble();
+yen=(inr/0.63);
+System.out.println("INR="+inr +"equal to YEN"+yen);
+}
+public static void main(String args[])
+{
+while(true)
+{
+int choice;
+System.out.println("\n Menu for currency conversion");
+System.out.println("1. Dollar to rupee");
+System.out.println("2. Rupee to dollar");
+System.out.println("3. Euro to rupee");
+System.out.println("4. Rupee to Euro");
+System.out.println("5. Yen to Rupee ");
+System.out.println("6. Rupee to Yen");
+System.out.println("7. Exit");
+System.out.println("Enter your choice");
+choice = sc.nextInt();
+currency c=new currency();
+switch(choice)
+{
+case 1: 
+c.dollartorupee();
+break;
+case 2: 
+c.rupeetodollar();
+break;
+case 3: 
+c.eurotorupee();
+break;
+case 4: 
+c.rupeetoeuro();
+break;
+case 5: 
+c.yentorupee();
+break;
+case 6: 
+c.rupeetoyen();
+break;
+case 7: System.exit(0);
+default:System.out.println("Wrong input");
+}
+}
+}
+}
